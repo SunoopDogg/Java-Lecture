@@ -1,5 +1,8 @@
 package chap05;
 
+import chap05.model.ClassRoom;
+import chap05.model.Student;
+
 public class SchoolClean {
     ClassRoom classRoom;
     Student student;
@@ -18,14 +21,15 @@ public class SchoolClean {
 
         this.cleanDegree += onceCleanDegree;
 
-        System.out.println(this.student.name + "이(가) " + this.classRoom.getClassName() + "반의 " + this.cleanType + "청소를 "
-                + this.cleanDegree + "만큼 했습니다.");
+        System.out.println(
+                this.student.getName() + "이(가) " + this.classRoom.getClassName() + "반의 " + this.cleanType + "청소를 "
+                        + this.cleanDegree + "만큼 했습니다.");
 
         if (this.cleanDegree >= maxCleanDegree)
             result = true;
 
         if (result)
-            System.out.println(this.student.name + "가 " + this.classRoom.getClassName() + "반의 " + this.cleanType
+            System.out.println(this.student.getName() + "가 " + this.classRoom.getClassName() + "반의 " + this.cleanType
                     + "청소를 마쳤습니다.\n\n");
 
         return result;

@@ -1,8 +1,8 @@
-package chap05;
+package chap05.model;
 
 public class Student {
-    String name;
-    int grade;
+    private String name;
+    private int grade;
 
     public Student(String name, int grade) {
         this.name = name;

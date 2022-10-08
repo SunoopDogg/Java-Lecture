@@ -1,5 +1,8 @@
 package chap05;
 
+import chap05.model.ClassRoom;
+import chap05.model.Student;
+
 public class SchoolCleanFloor extends SchoolClean {
     private double dustpanDegree;
     private double trashCanLiter;
@@ -12,25 +15,23 @@ public class SchoolCleanFloor extends SchoolClean {
     }
 
     public boolean procClean(int onceCleanDegree, int maxCleanDegree) {
-        boolean result = super.procClean(onceCleanDegree, maxCleanDegree);
-
         this.dustpanDegree++;
         this.trashCanLiter++;
 
-        System.out.println(this.student.name + "의 쓰레받기는 " + this.dustpanDegree + " 만큼 채워졌고 ");
-        System.out.println(this.student.name + "의 휴지통 리터량은 " + this.trashCanLiter + " 입니다.");
+        System.out.println(this.student.getName() + "의 쓰레받기는 " + this.dustpanDegree + " 만큼 채워졌고 ");
+        System.out.println(this.student.getName() + "의 휴지통 리터량은 " + this.trashCanLiter + " 입니다.");
 
         if (this.dustpanDegree >= 10) {
             this.dustpanDegree = 0;
-            System.out.println(this.student.name + "의 쓰레받기를 비웠습니다.");
+            System.out.println(this.student.getName() + "의 쓰레받기를 비웠습니다.");
         }
 
         if (this.trashCanLiter >= 10.0) {
             this.trashCanLiter = 0;
-            System.out.println(this.student.name + "의 휴지통을 비웠습니다");
+            System.out.println(this.student.getName() + "의 휴지통을 비웠습니다");
         }
 
-        return result;
+        return super.procClean(onceCleanDegree, maxCleanDegree);
     }
 
     public double getDustpanDegree() {
