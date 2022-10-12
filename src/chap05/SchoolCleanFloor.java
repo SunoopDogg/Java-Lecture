@@ -14,24 +14,29 @@ public class SchoolCleanFloor extends SchoolClean {
         this.trashCanLiter = trashCanLiter;
     }
 
+    @Override
     public boolean procClean(int onceCleanDegree, int maxCleanDegree) {
+        procCleanFloor();
+        return super.procClean(onceCleanDegree, maxCleanDegree);
+    }
+
+    public void procCleanFloor() {
         this.dustpanDegree++;
         this.trashCanLiter++;
 
-        System.out.println(this.student.getName() + "의 쓰레받기는 " + this.dustpanDegree + " 만큼 채워졌고 ");
-        System.out.println(this.student.getName() + "의 휴지통 리터량은 " + this.trashCanLiter + " 입니다.");
+        System.out.println(this.getStudent().getName() + "이(가) " + this.getClassRoom().getClassName() + "반의 "
+                + this.getCleanType() + "청소를 " + this.getCleanDegree() + "만큼 했습니다.");
+        System.out.println(this.getStudent().getName() + "의 휴지통 리터량은 " + this.trashCanLiter + " 입니다.");
 
         if (this.dustpanDegree >= 10) {
             this.dustpanDegree = 0;
-            System.out.println(this.student.getName() + "의 쓰레받기를 비웠습니다.");
+            System.out.println(this.getStudent().getName() + "의 쓰레받기를 비웠습니다.");
         }
 
         if (this.trashCanLiter >= 10.0) {
             this.trashCanLiter = 0;
-            System.out.println(this.student.getName() + "의 휴지통을 비웠습니다");
+            System.out.println(this.getStudent().getName() + "의 휴지통을 비웠습니다");
         }
-
-        return super.procClean(onceCleanDegree, maxCleanDegree);
     }
 
     public double getDustpanDegree() {

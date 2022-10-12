@@ -4,10 +4,10 @@ import chap05.model.ClassRoom;
 import chap05.model.Student;
 
 public class SchoolClean {
-    ClassRoom classRoom;
-    Student student;
-    double cleanDegree;
-    String cleanType;
+    private ClassRoom classRoom;
+    private Student student;
+    private double cleanDegree;
+    private String cleanType;
 
     public SchoolClean(ClassRoom classRoom, Student student, double cleanDegree, String cleanType) {
         this.classRoom = classRoom;

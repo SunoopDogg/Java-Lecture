@@ -14,24 +14,28 @@ public class SchoolCleanWindow extends SchoolClean {
 		this.windexLiter = windowDegree;
 	}
 
+	@Override
 	public boolean procClean(int onceCleanDegree, int maxCleanDegree) {
+		procCleanWindow();
+		return super.procClean(onceCleanDegree, maxCleanDegree);
+	}
+
+	public void procCleanWindow() {
 		this.cleanHangDegree--;
 		this.windexLiter -= 0.5;
 
-		System.out.println(this.student.getName() + "의 행주는 " + this.cleanHangDegree + " 만큼 깨끗하고 ");
-		System.out.println(this.student.getName() + "의 윈덱스 리터량은 " + this.windexLiter + " 입니다.");
+		System.out.println(this.getStudent().getName() + "의 행주는 " + this.cleanHangDegree + " 만큼 깨끗하고 ");
+		System.out.println(this.getStudent().getName() + "의 윈덱스 리터량은 " + this.windexLiter + " 입니다.");
 
 		if (this.cleanHangDegree <= 10) {
 			this.cleanHangDegree = 100;
-			System.out.println(this.student.getName() + "의 청소망을 교체했습니다.");
+			System.out.println(this.getStudent().getName() + "의 청소망을 교체했습니다.");
 		}
 
 		if (this.windexLiter <= 0.1) {
 			this.windexLiter = 10.0;
-			System.out.println(this.student.getName() + "의 윈도우 클리너를 교체했습니다.");
+			System.out.println(this.getStudent().getName() + "의 윈도우 클리너를 교체했습니다.");
 		}
-
-		return super.procClean(onceCleanDegree, maxCleanDegree);
 	}
 
 	public int getCleanHangDegree() {
