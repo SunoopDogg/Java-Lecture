@@ -1,7 +1,7 @@
 package chap05.model;
 
 public class ClassRoom {
-    private String className;
+    private String className; // 반 이름
 
     public ClassRoom(String className) {
         this.className = className;

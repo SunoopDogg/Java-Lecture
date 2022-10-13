@@ -5,8 +5,8 @@ public class Student {
     private int grade;
 
     public Student(String name, int grade) {
-        this.name = name;
-        this.grade = grade;
+        this.name = name; // 이름
+        this.grade = grade; // 학년
     }
 
     public String getName() {
