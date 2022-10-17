@@ -27,6 +27,7 @@ public class SchoolClean {
                 this.student.getName() + "이(가) " + this.classRoom.getClassName() + "반의 " + this.cleanType + "청소를 "
                         + this.cleanDegree + "만큼 했습니다.");
 
+        // 청소 정도가 최대 청소 정도보다 크거나 같으면 청소 종료
         if (this.cleanDegree >= maxCleanDegree)
             result = true;
 
