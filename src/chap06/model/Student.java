@@ -1,4 +1,4 @@
-package chap05.model;
+package chap06.model;
 
 public class Student {
     private String name;

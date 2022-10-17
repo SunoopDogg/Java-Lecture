@@ -1,4 +1,4 @@
-package chap05.model;
+package chap06.model;
 
 public class ClassRoom {
     private String className; // 반 이름

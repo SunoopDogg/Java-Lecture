@@ -1,7 +1,7 @@
-package chap05;
+package chap06;
 
-import chap05.model.ClassRoom;
-import chap05.model.Student;
+import chap06.model.ClassRoom;
+import chap06.model.Student;
 
 public class SchoolClean {
     private ClassRoom classRoom; // 반

@@ -1,7 +1,9 @@
-package chap05;
+package chap06.controller;
 
-import chap05.model.ClassRoom;
-import chap05.model.Student;
+import chap06.SchoolCleanFloor;
+import chap06.SchoolCleanWindow;
+import chap06.model.ClassRoom;
+import chap06.model.Student;
 
 public class SchoolCleanController {
     public static void main(String[] args) {

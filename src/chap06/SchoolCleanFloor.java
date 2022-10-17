@@ -1,7 +1,7 @@
-package chap05;
+package chap06;
 
-import chap05.model.ClassRoom;
-import chap05.model.Student;
+import chap06.model.ClassRoom;
+import chap06.model.Student;
 
 public class SchoolCleanFloor extends SchoolClean {
     private double dustpanDegree; // 쓰레받기의 먼지 정도
