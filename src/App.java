@@ -1,34 +1,21 @@
+import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws Exception {
-        Test t1 = new Test();
-        Test t2 = new Test();
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        t1.x = 10;
-        t1.y = 20;
+        int list[] = new int[5];
+        int sum = 0;
 
-        t2.x = 30;
-        t2.y = 40;
+        for (int i = 0; i < list.length; i++) {
+            System.out.print("입력:");
+            list[i] = scanner.nextInt();
+            if (list[i] > 0)
+                sum += list[i];
+        }
 
-        t1 = t2;
+        System.out.println("양수의 합계는 " + sum);
 
-        System.out.println(t1.x + ", " + t1.y);
-        System.out.println(t2.x + ", " + t2.y);
-
-        t2.x = 50;
-        t2.y = 60;
-
-        System.out.println(t1.x + ", " + t1.y);
-        System.out.println(t2.x + ", " + t2.y);
-    }
-
-}
-
-class Test {
-    int x = 0;
-    int y = 0;
-
-    public Test() {
-
+        scanner.close();
     }
 }
