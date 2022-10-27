@@ -1,18 +1,20 @@
 package chap01;
 
 public class Example {
-    static final int cnt = 0;
-    int a = 0;
+    private int F;
 
-    static void printA() {
-        System.out.println("hello");
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+        int c = a + b;
+        System.out.println(c);
     }
 
-    public int getA() {
-        return a;
+    public int getTemp() { // getter
+        return F;
     }
 
-    public void setA(int a) {
-        this.a = a;
+    public void setTemp(int C) { // setter
+        this.F = C * 9 / 5 + 32;
     }
 }
